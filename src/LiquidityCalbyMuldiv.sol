@@ -10,7 +10,7 @@ contract LiquidityCalculatorByMulDiv {
         uint160 sqrtPriceAX96,
         uint160 sqrtPriceBX96,
         uint256 amount0
-    ) internal pure returns (uint128 liquidity) {
+    ) public pure returns (uint128 liquidity) {
         if (sqrtPriceAX96 > sqrtPriceBX96)
             (sqrtPriceAX96, sqrtPriceBX96) = (sqrtPriceBX96, sqrtPriceAX96);
 
@@ -32,7 +32,7 @@ contract LiquidityCalculatorByMulDiv {
         uint160 sqrtPriceAX96,
         uint160 sqrtPriceBX96,
         uint256 amount1
-    ) internal pure returns (uint128 liquidity) {
+    ) public pure returns (uint128 liquidity) {
         if (sqrtPriceAX96 > sqrtPriceBX96)
             (sqrtPriceAX96, sqrtPriceBX96) = (sqrtPriceBX96, sqrtPriceAX96);
 
@@ -51,7 +51,7 @@ contract LiquidityCalculatorByMulDiv {
         uint160 sqrtPriceBX96,
         uint256 amount0,
         uint256 amount1
-    ) internal pure returns (uint128 liquidity) {
+    ) public pure returns (uint128 liquidity) {
         if (sqrtPriceAX96 > sqrtPriceBX96)
             (sqrtPriceAX96, sqrtPriceBX96) = (sqrtPriceBX96, sqrtPriceAX96);
 
